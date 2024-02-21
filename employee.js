@@ -1,5 +1,5 @@
 let attendence = '';
-let coountattendence=0;
+
 function generateRandomBinary() {
 
 
@@ -14,10 +14,15 @@ generateRandomBinary()
 function checkAttenndence(attendence) {
 
     if (attendence == 1) {
+         
+        
+   
 
-        coountattendence++;
         console.log("EMPLOYEE IS PRESENT")
-        let wageperhour = 20;
+        
+
+
+let wageperhour = 20;
 let oneworkingday=8;
 let dailyEmployeeWage=''
 
@@ -34,7 +39,7 @@ function dailyEmployeeWagecal() {
 
 dailyEmployeeWagecal(oneworkingday,oneworkingday)
 
-console.log(dailyEmployeeWage);
+console.log("full time employee wage "+dailyEmployeeWage);
 
 let wageperhourpart = 20;
 let oneworkingdaypart=4;
@@ -47,7 +52,7 @@ let dailyEmployeeWagepart=''
 
     parttimeEmployeeWage(oneworkingdaypart,wageperhourpart)
 
-console.log(dailyEmployeeWagepart);
+console.log("part time employee wage "+dailyEmployeeWagepart);
 
     }
 
@@ -68,7 +73,7 @@ function dailyEmployeeWagecal() {
 
 dailyEmployeeWagecal(oneworkingday,oneworkingday)
 
-console.log(dailyEmployeeWage);
+console.log("full time employee wage "+dailyEmployeeWage);
 
 let wageperhourpart = 20;
 let oneworkingdaypart=0;
@@ -81,10 +86,11 @@ let dailyEmployeeWagepart=''
 
     parttimeEmployeeWage(oneworkingdaypart,wageperhourpart)
 
-console.log(dailyEmployeeWagepart);
+console.log("part time employee wage "+dailyEmployeeWagepart);
 
     }
 
 }
 
 checkAttenndence(attendence)
+
