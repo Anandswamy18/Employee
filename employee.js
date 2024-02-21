@@ -26,7 +26,7 @@ function checkAttenndence(attendence) {
 
         let wageperhour = 20;
         let oneworkingday = 8;
-       
+
 
 
 
@@ -45,7 +45,7 @@ function checkAttenndence(attendence) {
 
         let wageperhourpart = 20;
         let oneworkingdaypart = 4;
-        
+
 
         function parttimeEmployeeWage(oneworkingdaypart, wageperhourpart) {
 
@@ -101,9 +101,9 @@ checkAttenndence(attendence)
 
 function monthlywagecal(numofdays) {
 
-   let monthlywage=numofdays*dailyEmployeeWage
-    console.log("monthly wage of fulltime employee "+monthlywage);
-    
+    let monthlywage = numofdays * dailyEmployeeWage
+    console.log("monthly wage of fulltime employee " + monthlywage);
+
 }
 
 monthlywagecal(20)
@@ -111,9 +111,19 @@ monthlywagecal(20)
 
 function monthlywagecalpart(numofdays) {
 
-    let monthlywage=numofdays*dailyEmployeeWagepart
-     console.log("monthly wage of parttime employee "+monthlywage);
-     
- }
- 
- monthlywagecalpart(20)
+    let monthlywage = numofdays * dailyEmployeeWagepart
+    console.log("monthly wage of parttime employee " + monthlywage);
+
+}
+
+monthlywagecalpart(20)
+
+
+numofdays = 19;
+numberofhours = 99;
+
+if (numofdays <= 20 && numberofhours <= 100) {
+    monthlywagecal(numofdays)
+    monthlywagecalpart(numofdays)
+
+}
