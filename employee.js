@@ -1,96 +1,41 @@
 let attendence = '';
 
 function generateRandomBinary() {
-
-
     attendence += Math.random() < 0.5 ? '0' : '1';
-
-
 }
 
-
-generateRandomBinary()
+generateRandomBinary();
 
 function checkAttenndence(attendence) {
+    switch (attendence) {
+        case '1':
+            console.log("EMPLOYEE IS PRESENT");
 
-    if (attendence == 1) {
-         
-        
-   
+            let wageperhour = 20;
+            let oneworkingday = 8;
+            let dailyEmployeeWage = wageperhour * oneworkingday;
+            console.log("full time employee wage " + dailyEmployeeWage);
 
-        console.log("EMPLOYEE IS PRESENT")
-        
+            let wageperhourpart = 20;
+            let oneworkingdaypart = 4;
+            let dailyEmployeeWagepart = wageperhourpart * oneworkingdaypart;
+            console.log("part time employee wage " + dailyEmployeeWagepart);
+            break;
 
+        default:
+            console.log("EMPLOYEE IS NOT PRESENT");
 
-let wageperhour = 20;
-let oneworkingday=8;
-let dailyEmployeeWage=''
+            let wageperhourAbsent = 20;
+            let oneworkingdayAbsent = 0;
+            let dailyEmployeeWageAbsent = wageperhourAbsent * oneworkingdayAbsent;
+            console.log("full time employee wage " + dailyEmployeeWageAbsent);
 
-
-
-function dailyEmployeeWagecal() {
-
-   
-    dailyEmployeeWage=wageperhour*oneworkingday;
-
-
-}	
-
-
-dailyEmployeeWagecal(oneworkingday,oneworkingday)
-
-console.log("full time employee wage "+dailyEmployeeWage);
-
-let wageperhourpart = 20;
-let oneworkingdaypart=4;
-let dailyEmployeeWagepart=''
-
-    function parttimeEmployeeWage(oneworkingdaypart,wageperhourpart){
-        
-        dailyEmployeeWagepart=wageperhourpart*oneworkingdaypart;
+            let wageperhourpartAbsent = 20;
+            let oneworkingdaypartAbsent = 0;
+            let dailyEmployeeWagepartAbsent = wageperhourpartAbsent * oneworkingdaypartAbsent;
+            console.log("part time employee wage " + dailyEmployeeWagepartAbsent);
+            break;
     }
-
-    parttimeEmployeeWage(oneworkingdaypart,wageperhourpart)
-
-console.log("part time employee wage "+dailyEmployeeWagepart);
-
-    }
-
-    else {
-        console.log("EMPLOYEE IS NOT PRESENT");
-        let wageperhour = 20;
-let oneworkingday=0;
-let dailyEmployeeWage=''
-
-function dailyEmployeeWagecal() {
-
-   
-    dailyEmployeeWage=wageperhour*oneworkingday;
-
-
-}	
-
-
-dailyEmployeeWagecal(oneworkingday,oneworkingday)
-
-console.log("full time employee wage "+dailyEmployeeWage);
-
-let wageperhourpart = 20;
-let oneworkingdaypart=0;
-let dailyEmployeeWagepart=''
-
-    function parttimeEmployeeWage(oneworkingdaypart,wageperhourpart){
-        
-        dailyEmployeeWagepart=wageperhourpart*oneworkingdaypart;
-    }
-
-    parttimeEmployeeWage(oneworkingdaypart,wageperhourpart)
-
-console.log("part time employee wage "+dailyEmployeeWagepart);
-
-    }
-
 }
 
-checkAttenndence(attendence)
-
+checkAttenndence(attendence);
