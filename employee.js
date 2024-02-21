@@ -36,8 +36,8 @@ console.log(dailyEmployeeWage);
 
     else {
         console.log("EMPLOYEE IS NOT PRESENT");
-        let wageperhour = 0;
-let oneworkingday=8;
+        let wageperhour = 20;
+let oneworkingday=0;
 let dailyEmployeeWage=''
 
 function dailyEmployeeWagecal() {
