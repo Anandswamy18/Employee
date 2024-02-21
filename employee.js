@@ -1,4 +1,6 @@
 let attendence = '';
+let dailyEmployeeWage = ''
+let dailyEmployeeWagepart = ''
 
 function generateRandomBinary() {
 
@@ -24,7 +26,7 @@ function checkAttenndence(attendence) {
 
         let wageperhour = 20;
         let oneworkingday = 8;
-        let dailyEmployeeWage = ''
+       
 
 
 
@@ -43,7 +45,7 @@ function checkAttenndence(attendence) {
 
         let wageperhourpart = 20;
         let oneworkingdaypart = 4;
-        let dailyEmployeeWagepart = ''
+        
 
         function parttimeEmployeeWage(oneworkingdaypart, wageperhourpart) {
 
@@ -94,3 +96,24 @@ function checkAttenndence(attendence) {
 
 checkAttenndence(attendence)
 
+
+
+
+function monthlywagecal(numofdays) {
+
+   let monthlywage=numofdays*dailyEmployeeWage
+    console.log("monthly wage of fulltime employee "+monthlywage);
+    
+}
+
+monthlywagecal(20)
+
+
+function monthlywagecalpart(numofdays) {
+
+    let monthlywage=numofdays*dailyEmployeeWagepart
+     console.log("monthly wage of parttime employee "+monthlywage);
+     
+ }
+ 
+ monthlywagecalpart(20)
