@@ -74,7 +74,7 @@ let wageperhourpart = 20;
 let oneworkingdaypart=0;
 let dailyEmployeeWagepart=''
 
-    function parttimeEmployeeWage(oneworkingdaypart,oneworkingdaypart){
+    function parttimeEmployeeWage(oneworkingdaypart,wageperhourpart){
         
         dailyEmployeeWagepart=wageperhourpart*oneworkingdaypart;
     }
