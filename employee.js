@@ -1,3 +1,9 @@
+
+let wageperhour = 20;
+let oneworkingday = 8;
+let dailyEmployeeWage = ''
+let oneworkingdaypart=4
+
 let attendence = '';
 
 function generateRandomBinary() {
@@ -20,74 +26,27 @@ function checkAttenndence(attendence) {
 
         console.log("EMPLOYEE IS PRESENT")
 
-
-
-        let wageperhour = 20;
-        let oneworkingday = 8;
-        let dailyEmployeeWage = ''
-
-
-
+         
         function dailyEmployeeWagecal() {
 
-
+             
             dailyEmployeeWage = wageperhour * oneworkingday;
-
+            console.log("full time employee wage " + dailyEmployeeWage);
+             
+            dailyEmployeeWage=oneworkingdaypart * wageperhour
+            console.log("part time employee wage " + dailyEmployeeWage);
 
         }
 
 
-        dailyEmployeeWagecal(oneworkingday, oneworkingday)
+        dailyEmployeeWagecal()
+        
 
-        console.log("full time employee wage " + dailyEmployeeWage);
-
-        let wageperhourpart = 20;
-        let oneworkingdaypart = 4;
-        let dailyEmployeeWagepart = ''
-
-        function parttimeEmployeeWage(oneworkingdaypart, wageperhourpart) {
-
-            dailyEmployeeWagepart = wageperhourpart * oneworkingdaypart;
-        }
-
-        parttimeEmployeeWage(oneworkingdaypart, wageperhourpart)
-
-        console.log("part time employee wage " + dailyEmployeeWagepart);
 
     }
 
     else {
         console.log("EMPLOYEE IS NOT PRESENT");
-        let wageperhour = 20;
-        let oneworkingday = 0;
-        let dailyEmployeeWage = ''
-
-        function dailyEmployeeWagecal() {
-
-
-            dailyEmployeeWage = wageperhour * oneworkingday;
-
-
-        }
-
-
-        dailyEmployeeWagecal(oneworkingday, oneworkingday)
-
-        console.log("full time employee wage " + dailyEmployeeWage);
-
-        let wageperhourpart = 20;
-        let oneworkingdaypart = 0;
-        let dailyEmployeeWagepart = ''
-
-        function parttimeEmployeeWage(oneworkingdaypart, wageperhourpart) {
-
-            dailyEmployeeWagepart = wageperhourpart * oneworkingdaypart;
-        }
-
-        parttimeEmployeeWage(oneworkingdaypart, wageperhourpart)
-
-        console.log("part time employee wage " + dailyEmployeeWagepart);
-
     }
 
 }
