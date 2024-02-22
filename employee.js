@@ -6,17 +6,18 @@ function employeeeWage(){
     var fulltimedays=0;
     var totalmonthwage=0;
     var totalhours=0;
+    let presentday;
 
     while(day<=daynmonths){
-      
+      presentday++;
         let perhourwage=20;
         let fulltimehours=8;
         let fulltimewage=fulltimehours*perhourwage
         let parttimewage=4*perhourwage;
 
 
-        let attendance=()=>{return Math.random() < 0.5 ? '0' : '1';}
-    }
+        let attendance=()=>{return Math.round(Math.random()*1);}
+   
 
     if(attendance==1){
         presentday++;
@@ -44,6 +45,7 @@ function employeeeWage(){
 }
 
     day++;
+}
     console.log("emplooyee has worked "+parttimedays + " part time days "+ fulltimedays+ " full time days");
      return `toatal wage is ${totalmonthwage}`
 }
