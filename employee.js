@@ -6,7 +6,7 @@ function employeeeWage() {
     var totalmonthwage = 0;
     var totalhours = 0;
 
-    while (day <= daynmonths) { // Loop until 20 days or 100 hours are reached
+    while (day <= daynmonths) { 
         let presentday;
         let perhourwage = 20;
         let fulltimehours = 8;
