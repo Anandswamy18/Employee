@@ -7,7 +7,7 @@ function employeeeWage() {
     var totalhours = 0;
 
     while (day <= daynmonths) { 
-      
+        let presentday;
         let perhourwage = 20;
         let fulltimehours = 8;
         let fulltimewage = fulltimehours * perhourwage;
@@ -16,7 +16,11 @@ function employeeeWage() {
         let attendance = Math.random() < 0.5 ? '0' : '1';
 
         if (attendance == '1') {
-            
+            presentday++;
+
+            if (presentday == 20 && totalhours == 100) {
+                return `Employee wages for 20 days and 100 hours is ${totalmonthwage}`;
+            }
             
             let parttimehours = Math.round(Math.random() * 4);
             if (parttimehours == 4) {
