@@ -1,6 +1,8 @@
 let attendence = '';
 let dailyEmployeeWage = ''
 let dailyEmployeeWagepart = ''
+numofdays = 20;
+numberofhours = 100;
 
 function generateRandomBinary() {
 
@@ -119,8 +121,7 @@ function monthlywagecalpart(numofdays) {
 monthlywagecalpart(20)
 
 
-numofdays = 19;
-numberofhours = 99;
+
 
 if (numofdays <= 20 && numberofhours <= 100) {
     monthlywagecal(numofdays)
