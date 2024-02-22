@@ -20,6 +20,10 @@ function employeeeWage(){
 
     if(attendance==1){
         presentday++;
+
+        if(presentday==20&& totalhours==100){
+            return `employee wages for 20 days and 100 hours is ${totalmonthwage}`;
+        }
    
 
 
@@ -39,7 +43,8 @@ function employeeeWage(){
 
 }
 
-    day++
+    day++;
+    console.log("emplooyee has worked "+parttimedays + " part time days "+ fulltimedays+ " full time days");
      return `toatal wage is ${totalmonthwage}`
 }
 
