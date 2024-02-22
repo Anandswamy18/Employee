@@ -6,9 +6,9 @@ function employeeeWage(){
     var fulltimedays=0;
     var totalmonthwage=0;
     var totalhours=0;
-
-    while(day<=daynmonths){
       
+    while(day<=daynmonths){
+        let presentday;
         let perhourwage=20;
         let fulltimehours=8;
         let fulltimewage=fulltimehours*perhourwage
@@ -43,7 +43,7 @@ function employeeeWage(){
     day++
 
 }
-     return totalmonthwage
+     return " total wage is "+totalmonthwage
 
 }
   let res =employeeeWage()
