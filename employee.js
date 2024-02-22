@@ -15,13 +15,13 @@ function employeeeWage(){
         let parttimewage=4*perhourwage;
 
 
-        let attendance=()=>{return Math.random() < 0.5 ? '0' : '1';}
-    }
+        let attendance=()=>{return Math.round(Math.random()*1)}
+    
 
     if(attendance==1){
         presentday++;
    
-
+    
 
     let parttimehours=Math.round(Math.random()*4);
     if(parttimehours==4){
@@ -37,12 +37,15 @@ function employeeeWage(){
         totalhours+=8;
     }
 
-}
+    }
+  
 
     day++
-     return `toatal wage is ${totalmonthwage}`
-}
 
+}
+     return totalmonthwage
+
+}
   let res =employeeeWage()
   console.log(res);
 
