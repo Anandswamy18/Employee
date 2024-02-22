@@ -1,47 +1,35 @@
-function employeeeWage() {
-    var daynmonths = 30;
-    var day = 1;
-    var parttimedays = 0;
-    var fulltimedays = 0;
-    var totalmonthwage = 0;
-    var totalhours = 0;
+let wagePerHour = 20;
+let fullTimeWorkingHours = 8;
+let partTimeWorkingHours = 4;
+let dailyEmployeeWage = 0;
+let attendance = '';
 
-    while (day <= daynmonths) { 
-        let presentday;
-        let perhourwage = 20;
-        let fulltimehours = 8;
-        let fulltimewage = fulltimehours * perhourwage;
-        let parttimewage = 4 * perhourwage;
-
-        let attendance = Math.random() < 0.5 ? '0' : '1';
-
-        if (attendance == '1') {
-            presentday++;
-
-            if (presentday == 20 && totalhours == 100) {
-                return `Employee wages for 20 days and 100 hours is ${totalmonthwage}`;
-            }
-            
-            let parttimehours = Math.round(Math.random() * 4);
-            if (parttimehours == 4) {
-                let wage = parttimewage;
-                totalmonthwage += wage;
-                parttimedays++;
-                totalhours += 4;
-            } else {
-                let wage = fulltimewage;
-                totalmonthwage += wage;
-                fulltimedays++;
-                totalhours += 8;
-            }
-        }
-
-        day++;
-    }
-
-    console.log("Employee has worked " + parttimedays + " part-time days and " + fulltimedays + " full-time days");
-    return `Total wage is ${totalmonthwage}`;
+function generateRandomBinary() {
+    attendance += Math.random() < 0.5 ? '0' : '1';
 }
 
-let res = employeeeWage();
-console.log(res);
+generateRandomBinary();
+
+function checkAttendance(attendance) {
+    switch (attendance) {
+        case '1':
+            console.log("EMPLOYEE IS PRESENT");
+            calculateDailyEmployeeWage(fullTimeWorkingHours);
+            break;
+        case '0':
+            console.log("EMPLOYEE IS NOT PRESENT");
+            break;
+        default:
+            console.log("INVALID ATTENDANCE DATA");
+            break;
+    }
+}
+
+function calculateDailyEmployeeWage(workingHours) {
+    dailyEmployeeWage = wagePerHour * workingHours;
+    console.log("Full-time employee wage: " + dailyEmployeeWage);
+    dailyEmployeeWage = partTimeWorkingHours * wagePerHour;
+    console.log("Part-time employee wage: " + dailyEmployeeWage);
+}
+
+checkAttendance(attendance);
