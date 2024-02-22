@@ -18,7 +18,7 @@ function employeeeWage() {
         if (attendance == '1') {
             presentday++;
 
-            if (presentday == 20 && totalhours == 100) {
+             if (presentday == 20 && totalhours == 100) {
                 return `Employee wages for 20 days and 100 hours is ${totalmonthwage}`;
             }
             
