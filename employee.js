@@ -1,52 +1,50 @@
-let wagePerHour = 20;
-let fullTimeWorkingDayHours = 8;
-let partTimeWorkingDayHours = 4;
-let dailyEmployeeWage = '';
-let attendance = '';
 
-function generateRandomBinary() {
-    attendance += Math.random() < 0.5 ? '0' : '1';
-}
+function employeeeWage(){
+    var daynmonths=30;
+    var day=1;
+    var parttimedays=0;
+    var fulltimedays=0;
+    var totalmonthwage=0;
+    var totalhours=0;
+
+    while(day<=daynmonths){
+      
+        let perhourwage=20;
+        let fulltimehours=8;
+        let fulltimewage=fulltimehours*perhourwage
+        let parttimewage=4*perhourwage;
 
 
-function calculateMonthlyWage(dailyWage, workingDaysInMonth) {
-    return dailyWage * workingDaysInMonth;
-}
-
-
-function checkAttendance(attendance) {
-    switch (attendance) {
-        case '1':
-            console.log("EMPLOYEE IS PRESENT");
-            calculateDailyEmployeeWage(fullTimeWorkingDayHours, partTimeWorkingDayHours);
-            break;
-        case '0':
-            console.log("EMPLOYEE IS NOT PRESENT");
-            break;
-        default:
-            console.log("INVALID ATTENDANCE DATA");
-            break;
+        let attendance=()=>{return Math.random() < 0.5 ? '0' : '1';}
     }
-}
 
-
-function calculateDailyEmployeeWage(fullTimeHours, partTimeHours) {
-    let fullTimeWage = wagePerHour * fullTimeHours;
-    let partTimeWage = wagePerHour * partTimeHours;
-
-    console.log("Full-time employee wage: " + fullTimeWage);
-    console.log("Part-time employee wage: " + partTimeWage);
-
+    if(attendance==1){
+        presentday++;
    
-    let monthlyFullTimeWage = calculateMonthlyWage(fullTimeWage, 20);
-    let monthlyPartTimeWage = calculateMonthlyWage(partTimeWage, 20);
 
-    console.log("Monthly full-time employee wage: " + monthlyFullTimeWage);
-    console.log("Monthly part-time employee wage: " + monthlyPartTimeWage);
+
+    let parttimehours=Math.round(Math.random()*4);
+    if(parttimehours==4){
+        let wage=parttimewage;
+        totalmonthwage+=wage;
+        parttimedays++;
+        totalhours+=4;
+    }
+    else{
+        let wage=fulltimewage;
+        totalmonthwage+=wage;
+        fulltimedays++;
+        totalhours+=8;
+    }
+
 }
 
+    day++
+     return `toatal wage is ${totalmonthwage}`
+}
 
-generateRandomBinary();
+  let res =employeeeWage()
+  console.log(res);
 
 
-checkAttendance(attendance);
+
