@@ -1,3 +1,7 @@
+
+let wageperhour = 20;
+let oneworkingday = 8;
+let dailyEmployeeWage = ''
 let attendence = '';
 function generateRandomBinary() {
 
@@ -9,51 +13,34 @@ function generateRandomBinary() {
 
 
 generateRandomBinary()
+checkAttenndence(attendence)
 
 function checkAttenndence(attendence) {
 
     if (attendence == 1) {
 
         console.log("EMPLOYEE IS PRESENT")
-        let wageperhour = 20;
-        let oneworkingday = 8;
-        let dailyEmployeeWage = ''
+
 
         function dailyEmployeeWagecal() {
 
 
             dailyEmployeeWage = wageperhour * oneworkingday;
-
+            console.log("daily employee wage "+dailyEmployeeWage);
 
         }
 
 
         dailyEmployeeWagecal(oneworkingday, oneworkingday)
 
-        console.log(dailyEmployeeWage);
+        
 
     }
 
     else {
         console.log("EMPLOYEE IS NOT PRESENT");
-        let wageperhour = 20;
-        let oneworkingday = 0;
-        let dailyEmployeeWage = ''
-
-        function dailyEmployeeWagecal() {
-
-
-            dailyEmployeeWage = wageperhour * oneworkingday;
-
-
-        }
-
-
-        dailyEmployeeWagecal(oneworkingday, oneworkingday)
-
-        console.log(dailyEmployeeWage);
+ 
     }
 
 }
 
-checkAttenndence(attendence)
