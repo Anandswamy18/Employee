@@ -51,5 +51,5 @@ function checkAttenndence(attendence) {
 
 }
 
-checkAttenndence(attendence)
+checkAttenndence(attendence) 
 
